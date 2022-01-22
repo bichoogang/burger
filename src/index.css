@@ -1,13 +1,825 @@
-body {
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+}
+html{
+  scroll-behavior: smooth;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+nav{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  /* align-items: center; */
+  z-index: 5;
+  position: relative;
+  background-color: transparent;
+  height: 40px;
+}
+nav .logo{
+  display: flex;
+  width: 50%;
+  padding-left: 10px
+  
+}
+@import url('https://fonts.googleapis.com/css2?family=Qwigley&display=swap');
+nav .logo h1{
+  font-size: 40px;
+  font-family: 'Qwigley', cursive;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+nav .logo img{
+  width: 55px;
+  height: 39px;
+}
+nav .menumain{
+  width: 50%;
+}
+nav .menumain ol{
+  display: flex;
+  list-style: none;
+  justify-content: space-evenly;
+}
+@import url('https://fonts.googleapis.com/css2?family=Qwigley&family=Sunflower:wght@300&display=swap');
+nav .menumain ol li a{
+  text-decoration: none;
+  color: white;
+  font-family: 'Sunflower', sans-serif;
+}
+.menu_icon{
+  align-items: center;
+  display: none;
+}
+.home{
+  height: 93vh;
+  width: 100%;
+  overflow: hidden;
+  padding: 0!important;
+  margin: 0!important;
+}
+@import url('https://fonts.googleapis.com/css2?family=Aladin&family=Qwigley&display=swap');
+.home_left{
+  background-color: transparent;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Aladin', cursive;
+  position: relative;
+  z-index: 3;
+
+}
+.home_left h2{
+  font-size: 60px;
+  letter-spacing: 2px;
+}
+.home_left .burtext{
+  color: #A60F0F;
+}
+.home_left .burtext span{
+  color: #F68546;
+}
+.home_left button{
+  border: none;
+  outline: none;
+  background-color: #A60F0F;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 7px 15px ;
+  margin-top: 10px;
+  color: white;
+}
+.orderonline{
+  background-color: #A60F0F;
+  padding: 2px 6px;
+  border-radius: 2px 8px 2px 8px;
+}
+.home_right{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  /* height: 93vh; */
+  overflow: hidden;
+  background-color: transparent;
+  overflow-y: hidden!;
+}
+.home_right img{
+  z-index: 14;
+}
+@import url('https://fonts.googleapis.com/css2?family=Risque&display=swap');
+.home_right .img_card{
+  /* background-color: #A60F0F; */
+  z-index: 16;
+  position: relative;
+  font-family: 'Risque', cursive;
+}
+.home_right .img_card .offprice{
+  background-color: #C04D4D;
+  z-index: 16;
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  border-radius: 50%;
+  bottom: 25px;
+  right: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.home_right .img_card .offpricesub{
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px dashed white;
+  border-radius: 50%;
+
+}
+.home_right .img_card .offprice p{
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+.home_right .img_card .offprice h4{
+  font-size: 30px;
+  font-weight: bold;
+  display: flex;
+}
+.home_right .img_card .offprice h4 span:nth-child(1){
+  font-size: 20px;
+
+}
+.home_right .img_card .offprice h4 span:nth-child(2){
+  font-size: 25px;
+  border-bottom: 2px solid black;
+}
+.home_right_circle {
+  background-color: #F78546;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  clip-path: circle(800px at right );
+  z-index: -2;
+  
+  
+  
+  
+}
+/* .offer{
+  width: 100px;
+  height: 100px;
+  background-color: #C04D4D;
+  position:fixed;
+  z-index: 5;
+  bottom: 300px;
+  right: 300px;
+  border-radius: 50%;
+} */
+
+/* timing */
+.timing{
+  padding: 60px 0;
+  background-color: whitesmoke;
+  margin-top: -8px;
+  position: relative;
+  z-index: 6;
+}
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+.time_card h1{
+  font-size: 25px;
+  color: black;
+  font-weight: bolder;
+}
+.time_card svg{
+  font-size: 60px;
+  color: #F78546;
+  margin-bottom: 10px;
+}
+.time_card p{
+  font-size: 20px;
+  margin-top: 5px;
+}
+.time_card .card{
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Nunito', sans-serif;
+  margin: 10px 0;
+}
+
+
+
+.about{
+  height: 100vh;
+  background-color: transparent;
+  position: relative;
+  z-index: 6;
+  /* margin-top: -10px; */
+}
+.about_left{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px!important;
+  text-align: center;
+  position: relative;
+  z-index: 3;
+}
+.about_d{
+  background-color: #F78546;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom:  0;
+  left: 0;
+  clip-path: circle(800px at left  1000px );
+}
+.about_r{
+  background-color: #F78546;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top:  0;
+  left: 0;
+  clip-path: circle(400px at right  0px );
+}@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Mate+SC&display=swap');
+.about_right{
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+  margin-top: 60px!important;
+  width: 500px!important;
+  z-index: 6;
+  
+}
+.about_right h2{
+  font-family: 'Mate SC', serif;
+  font-weight: bolder;
+  font-size: 35px;
+}
+.about_right h3{
+  font-family: 'Architects Daughter', cursive;
+  font-size: 20px;
+  color: #F78546;
+}
+.about_right p{
+  font-family: 'Architects Daughter', cursive;
+}
+.about_right .btnn{
+  width: 100%;
+}
+.about_right .btnn button{
+  margin: 30px 30px 0 0;
+  padding: 10px 30px;
+  border-radius: 30px;
+  background-color: #F78546;
+  color: aliceblue;
+  border: none;
+  outline: none;
+}
+.about_right .btnn svg{
+  font-size: 45px;
+  margin-left: 20px;
+  color: rgb(27, 27, 27);
+}
+.about_right .btnn .btn_video{
+  background-color: transparent;
+  color: black;
+}
+
+
+.items{
+  background-color: whitesmoke;
+  padding: 90px 0;
+}
+.items .card{
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-top: 10px;
+}
+.menu .card img{
+  height: 250px;
+}
+.items .card h2{
+  font-family: 'Mate SC', serif;
+  font-size: 28px;
+  font-weight: bold;
+
+}
+.items .card p{
+  font-family: 'Architects Daughter', cursive;
+  width: 80%;
+}
+.items .card a{
+  text-decoration: none;
+  font-weight: 600;
+  font-family: 'Mate SC', serif;
+  color: black;
+}
+.items .card svg{
+  font-size: 35px;
+  color: #F78546;
+}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Yanone+Kaffeesatz:wght@300&display=swap');
+.menu{
+  height: 80vh;
+  background-color: white;
+  padding: 30px 0;
+
+}
+@import url('https://fonts.googleapis.com/css2?family=Reggae+One&display=swap');
+.menu .menu_detail{
+  background-color: black;
+  color: white;
+  padding: 10px 10px;
+}
+.menu h1{
+  font-family: 'Reggae One', cursive;
+}
+.menu .menu_detail p{
+  margin: 0;
+  font-family: 'Open Sans Condensed', sans-serif;
+  color: #F78546;
+  font-weight: 700;
+  font-size: 18px;
+}
+.menu .menu_detail h3{
+  font-size: 20px;
+  margin: 5px 0;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-weight: bold;
+  letter-spacing: 2px;
+
+}
+.menu .card{
+  border: none!important;
+  background-image: linear-gradient(to top ,#F78546,#fff);
+  
+}
+.menu .menu_buy{
+  display: flex;
+  justify-content: space-between;
+}
+.menu .menu_buy button{
+  border: none;
+  outline: none;
+  background-color: rgb(153, 10, 10);
+  padding: 5px 10px;
+  color: white;
+}
+.menu .card_design{
+  background-color: #F78546;
+  width: 100%;
+  height: 100%;
+}
+.swiper-pagination{
+  bottom:-18px!important;
+  padding: 10px 0 !important;
+  display: none;
+  
+}
+.swiper-pagination-bullet{
+  width: 18px!important;
+  height: 18px!important;
+}
+.swiper-button-prev:after, .swiper-button-next:after{
+  font-size: 50px!important;
+  font-weight: bold!important;
+  padding: 15px;
+  background-color: #fffbfb;
+  color: #A60F0F;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.swiper-container{
+  height: auto;
+  /* margin: 80px 0; */
+}
+.swiper-wrapper{
+  align-items: center;
+}
+.swiper-slide{
+  width: 300px!important;
+  /* height: 50px!important; */
+  height: auto!important;
+  /* background-color: red; */
+  margin:0  0 20px 0;
+  z-index: 1;
+}
+.contact{
+  height: 80vh;
+  padding: 20px 0;
+  background-color: whitesmoke;
+  display: flex;
+  height: 100vh;
+  /* align-items: center; */
+  justify-content: center;
+  /* background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.8)),url(https://static.vecteezy.com/system/resources/previews/001/993/200/original/burger-seamless-pattern-background-illustration-vector.jpg); */
+  background-position: center;
+  background-size: cover;
+ 
+}
+/* .contact .main{
+  
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+} */
+.contact .contact_left{
+  /* background-color: white; */
+  /* background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.8)),url(https://img.freepik.com/free-vector/realistic-burger-chalkboard-background_79603-1042.jpg?size=626&ext=jpg); */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+
+}
+.contact .contact_left input{
+  width: 100%;
+  padding: 15px 5px;
+  outline: none;
+  margin-bottom: 20px;
+  border: none;
+}
+.contact .contact_left textarea{
+  width: 100%;
+  padding: 0 0 45px 5px;
+  border: none;
+  outline: none;
+}
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+.contact .contact_right{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  font-family: 'Quicksand', sans-serif;
+}
+.contact .contact_right svg{
+  font-size: 40px;
+  margin-right: 10px;
+  color: #F78546;
+}
+.contact .contact_right p{
+  font-size: 25px;
+}
+.contact .contact_right span{
+  font-weight: bold;
+  font-size: 30px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Stint+Ultra+Condensed&display=swap');
+.foot{
+  background-color: #F78546;
+  font-family: 'Stint Ultra Condensed', cursive;
+}
+.foot ol{
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.foot ol a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.foot .foot_left{
+  align-items: center;
+}
+.foot .foot_right{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 20px;
+  letter-spacing: 2px;
+  margin-top: 15px;
+}
+
+@media screen and (max-width: 1200px){
+.home_right_circle {
+  clip-path: circle(600px at right );
+
+
+}
+.about{
+  height: auto;
+  background-color: transparent;
+  position: relative;
+  z-index: 6;
+  /* margin-top: -10px; */
+}
+.about_left{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px!important;
+  text-align: center;
+  position: relative;
+  z-index: 3;
+}
+.about_left img{
+  height: 300px;
+}
+.about_d{
+  background-color: #F78546;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom:  0;
+  left: 0;
+  clip-path: circle(200px at left  1000px );
+  /* display: none; */
+}
+.about_r{
+  background-color: #F78546;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top:  0;
+  left: 0;
+  clip-path: circle(450px at right  0px );
+}@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Mate+SC&display=swap');
+.about_right{
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+  margin-top: 60px!important;
+  width: 500px!important;
+  z-index: 6;
+  
+}
+.about_right h2{
+  font-family: 'Mate SC', serif;
+  font-weight: bolder;
+  font-size: 35px;
+}
+.about_right h3{
+  font-family: 'Architects Daughter', cursive;
+  font-size: 20px;
+  color: #F78546;
+}
+.about_right p{
+  font-family: 'Architects Daughter', cursive;
+}
+.about_right .btnn{
+  width: 100%;
+}
+.about_right .btnn button{
+  margin: 10px 0px 10px 0;
+  padding: 10px 10px;
+  border-radius: 30px;
+  background-color: #F78546;
+  color: aliceblue;
+  border: none;
+  outline: none;
+}
+.about_right .btnn svg{
+  font-size: 45px;
+  margin-left: 20px;
+  color: rgb(27, 27, 27);
+}
+.about_right .btnn .btn_video{
+  background-color: transparent;
+  color: black;
+}
+
+}
+@media screen and (max-width: 786px){
+
+  /* .home_right_circle{
+    display: none;
+  } */
+  .home_left .burtext span{
+  color: #803d06;
+}
+  .menu_icon{
+    display: block;
+  }
+  .menu_icon svg{
+    font-size: 30px;
+    color: white;
+  }
+  nav .menumain{
+    display: block;
+    position: absolute;
+    top: 50px;
+    /* background-color: turquoise; */
+    left: -500px;
+    height: 100vh;
+    transition: 0.8s all;
+  }
+  nav .exmenu{
+    display: block;
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    background-color: rgba(8, 8, 8, 0.603);
+    left: 0;
+  }
+  nav .menumain ol{
+    display: block;
+    
+  }
+  nav .menumain ol li{
+    margin: 30px 0;
+  }
+  nav .xbtn{
+    display: none;
+  }
+  nav .xbtn1{
+    display: block;
+  }
+  .mbtn1{
+    display: none;
+  }
+  .home_right .img_card .offprice{
+    background-color: #C04D4D;
+    z-index: 16;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    border-radius: 50%;
+    bottom: 25px;
+    right: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .home_right .img_card .offpricesub{
+    width: 90px;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed white;
+    border-radius: 50%;
+  
+  }
+  .home_right .img_card .offprice p{
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .home_right .img_card .offprice h4{
+    font-size: 25px;
+    font-weight: bold;
+    display: flex;
+  }
+  .home_right .img_card .offprice h4 span:nth-child(1){
+    font-size: 18px;
+  
+  }
+  .home_right .img_card .offprice h4 span:nth-child(2){
+    font-size: 18px;
+    border-bottom: 2px solid black;
+  }
+
+  .about{
+    height: auto;
+  }
+  .timing{
+    padding: 60px 0;
+    background-color: whitesmoke;
+    margin-top: 30px;
+    position: static;
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+  .time_card h1{
+    font-size: 20px;
+    color: black;
+    font-weight: bolder;
+  }
+  .time_card svg{
+    font-size: 45px;
+    color: #F78546;
+    margin-bottom: 10px;
+  }
+  .time_card p{
+    font-size: 18px;
+    margin-top: 5px;
+  }
+  .time_card .card{
+    height: 180px;
+    
+  }
+
+
+
+  .about{
+    height: auto;
+    background-color: transparent;
+    position: relative;
+    z-index: 6;
+    /* margin-top: -10px; */
+  }
+  .about_left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px!important;
+    text-align: center;
+    position: relative;
+    z-index: 3;
+  }
+  .about_left img{
+    height: 300px;
+  }
+  .about_d{
+    background-color: #F78546;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom:  0;
+    left: 0;
+    clip-path: circle(200px at left  1000px );
+    /* display: none; */
+  }
+  .about_r{
+    background-color: #F78546;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:  0;
+    left: 0;
+    clip-path: circle(450px at right  0px );
+  }@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Mate+SC&display=swap');
+  .about_right{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    margin-top: 60px!important;
+    width: 500px!important;
+    z-index: 6;
+    
+  }
+  .about_right h2{
+    font-family: 'Mate SC', serif;
+    font-weight: bolder;
+    font-size: 35px;
+  }
+  .about_right h3{
+    font-family: 'Architects Daughter', cursive;
+    font-size: 20px;
+    color: #F78546;
+  }
+  .about_right p{
+    font-family: 'Architects Daughter', cursive;
+  }
+  .about_right .btnn{
+    width: 100%;
+  }
+  .about_right .btnn button{
+    margin: 10px 0px 10px 0;
+    padding: 10px 10px;
+    border-radius: 30px;
+    background-color: #F78546;
+    color: aliceblue;
+    border: none;
+    outline: none;
+  }
+  .about_right .btnn svg{
+    font-size: 45px;
+    margin-left: 20px;
+    color: rgb(27, 27, 27);
+  }
+  .about_right .btnn .btn_video{
+    background-color: transparent;
+    color: black;
+  }
+
+  .contact {
+    height: auto;
+  }
+  .home{
+    height: auto;
+  }
+  .home_left{
+    height: auto;
+  }
+  
+  
 }
